@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #111018;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.landing {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(106, 65, 104, .25), transparent 42%),
+    #111018;
+}
+
+.poster {
+  position: relative;
+  width: min(100vw, 941px);
+  line-height: 0;
+  overflow: hidden;
+  background: #17151f;
+}
+
+.poster-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Прозрачная кнопка поверх кнопки, нарисованной на изображении. */
+.max-button {
+  position: absolute;
+  left: 16.5%;
+  top: 85.25%;
+  width: 67%;
+  height: 7.45%;
+  display: block;
+  border-radius: 40px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.max-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (min-width: 942px) {
+  .poster {
+    box-shadow: 0 0 70px rgba(0, 0, 0, .45);
+  }
+}
+
+@media (max-width: 600px) {
+  .max-button {
+    left: 16.5%;
+    top: 85.25%;
+    width: 67%;
+    height: 7.45%;
+  }
+}
